@@ -8,6 +8,7 @@
 apply plugin: 'java'
 apply plugin: 'distribution'
 apply plugin: 'eclipse'
+apply plugin: 'war'
 
 repositories {
   mavenCentral()
@@ -15,6 +16,9 @@ repositories {
 
 /* load any dependencies */
 dependencies {
+  compile     'javax.servlet:javax.servlet-api:4.+',
+              'com.fasterxml.jackson.core:jackson-databind:2.9.+'
+
   testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.+',
               'org.junit.jupiter:junit-jupiter-engine:5.3.+'
 }
